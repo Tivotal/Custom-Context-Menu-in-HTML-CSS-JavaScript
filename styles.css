@@ -1,0 +1,83 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #8b55e9 0%, #5d6be6 100%);
+}
+
+.wrapper {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+  position: absolute;
+}
+
+.wrapper .menu {
+  padding: 10px 12px;
+}
+
+.wrapper .menu .item {
+  list-style: none;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  padding: 0 5px 0 10px;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+.wrapper .menu .item:hover {
+  background: #f2f2f2;
+}
+
+.wrapper .menu .item span {
+  margin-left: 8px;
+  font-size: 19px;
+}
+
+.wrapper .menu .item.delete {
+  display: flex;
+  margin-top: -5px;
+  padding: 5px 12px;
+  border-top: 1px solid #ccc;
+}
+
+.wrapper .menu .share {
+  position: relative;
+  justify-content: space-between;
+}
+
+.wrapper .menu .share .share-menu {
+  position: absolute;
+  width: 200px;
+  background: #fff;
+  right: -200px;
+  top: -35px;
+  padding: 13px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper .menu .share:hover .share-menu {
+  opacity: 1;
+  pointer-events: auto;
+}
